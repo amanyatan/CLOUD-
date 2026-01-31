@@ -13,7 +13,7 @@ export default function Features() {
                     Advanced Features
                 </h1>
                 <p className="text-xl text-gray-400 leading-relaxed mb-12">
-                    VirtuaCode is packed with features designed for the modern developer. From AI-powered pair programming to zero-config deployments.
+                    CLOUD is packed with features designed for the modern developer. From AI-powered pair programming to zero-config deployments.
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {[

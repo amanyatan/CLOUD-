@@ -65,7 +65,7 @@ export default function Dashboard() {
                     <div className="flex items-center gap-4">
                         <div className="flex items-center gap-3 mr-4 md:mr-8 cursor-pointer" onClick={() => navigate('/')}>
                             <InfinityIcon className="w-6 h-6 text-blue-500" />
-                            <span className="font-bold text-lg tracking-tight text-white/90 hidden md:inline uppercase">VirtuaCode</span>
+                            <span className="font-bold text-lg tracking-tight text-white/90 hidden md:inline uppercase">CLOUD</span>
                         </div>
                     </div>
 

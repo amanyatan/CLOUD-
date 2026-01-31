@@ -50,7 +50,7 @@ export default function Home() {
                         <InfinityIcon className="text-white w-8 h-8 relative z-10 group-hover:rotate-180 transition-transform duration-700 ease-in-out" />
                     </div>
                     <span className="font-bold text-lg md:text-2xl tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-gray-900 via-gray-700 to-gray-500 dark:from-white dark:via-gray-300 dark:to-gray-500">
-                        VirtuaCode
+                        CLOUD
                     </span>
                 </div>
 
@@ -105,7 +105,7 @@ export default function Home() {
                         transition={{ duration: 1, delay: 0.4 }}
                         className="text-slate-700 dark:text-gray-400 text-lg md:text-xl mb-12 max-w-2xl mx-auto leading-relaxed font-medium"
                     >
-                        Empower your team with a virtual workspace that combines AI intelligence, global collaboration, and cloud-native infrastructure.
+                        Empower your team with a cloud workspace that combines AI intelligence, global collaboration, and cloud-native infrastructure.
                     </motion.p>
 
 
@@ -322,10 +322,10 @@ export default function Home() {
                     <div className="col-span-2">
                         <div className="flex items-center gap-3 mb-8">
                             <InfinityIcon className="text-blue-600 dark:text-blue-500 w-8 h-8" />
-                            <span className="font-bold text-2xl tracking-tighter text-gray-900 dark:text-white">VirtuaCode</span>
+                            <span className="font-bold text-2xl tracking-tighter text-gray-900 dark:text-white">CLOUD</span>
                         </div>
                         <p className="text-gray-600 dark:text-gray-500 max-w-xs leading-relaxed">
-                            The world's most advanced virtual coding platform. Built by developers, for developers.
+                            The world's most advanced cloud coding platform. Built by developers, for developers.
                         </p>
                     </div>
                     <div>

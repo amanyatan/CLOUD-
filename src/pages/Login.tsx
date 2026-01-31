@@ -155,7 +155,7 @@ export default function Login() {
                     <div className="p-2 bg-blue-600 rounded-lg mr-3 shadow-lg shadow-blue-500/20">
                         <Code2 className="h-5 w-5" />
                     </div>
-                    VirtuaCode Inc
+                    CLOUD Inc
                 </div>
 
                 <div className="relative z-20 mt-auto">

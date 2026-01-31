@@ -22,7 +22,6 @@ import ThemeToggle from '../components/ThemeToggle'
 import { useTheme } from '../context/ThemeContext'
 import { supabase } from '../lib/supabase'
 import { generateContent } from '../lib/gemini'
-import { motion } from 'framer-motion'
 
 interface IDEFile {
     id: string
@@ -45,7 +44,6 @@ export default function IDE() {
     const [files, setFiles] = useState<IDEFile[]>([])
     const [activeFileId, setActiveFileId] = useState<string | null>(null)
     const [activeProjectId, setActiveProjectId] = useState<string | null>(null)
-
     // UI State
     const [activeSidebar, setActiveSidebar] = useState<'files' | 'ai'>('files')
     const [terminalOpen, setTerminalOpen] = useState(true)
@@ -65,7 +63,7 @@ export default function IDE() {
     const [isGenerating, setIsGenerating] = useState(false)
 
     // Terminal History
-    const [terminalHistory, setTerminalHistory] = useState<string[]>(['VirtuaCode Terminal Started...', 'Type "help" for commands.', ''])
+    const [terminalHistory, setTerminalHistory] = useState<string[]>(['CLOUD Terminal Started...', 'Type "help" for commands.', ''])
     const [terminalInput, setTerminalInput] = useState('')
 
     const getLanguage = (name: string) => {
@@ -206,7 +204,7 @@ export default function IDE() {
                     </button>
                     <div className="flex items-center gap-2 cursor-pointer" onClick={() => navigate('/dashboard')}>
                         <InfinityIcon className="w-5 h-5 md:w-6 md:h-6 text-blue-500" />
-                        <span className="font-bold text-white tracking-widest uppercase text-[10px] md:text-sm hidden xs:block">VirtuaCode</span>
+                        <span className="font-bold text-white tracking-widest uppercase text-[10px] md:text-sm hidden xs:block">CLOUD</span>
                     </div>
                     <button onClick={() => navigate('/dashboard')} className="hidden sm:flex items-center gap-2 text-xs font-bold text-gray-400 hover:text-white transition-colors bg-white/5 px-3 py-1.5 rounded-full border border-white/5">
                         <ArrowLeft size={14} /> <span className={currentTheme === 'dark' ? 'text-gray-400' : 'text-gray-600'}>Back to Home</span>
@@ -418,7 +416,7 @@ export default function IDE() {
                                     </div>
                                 ))}
                                 <div className="flex items-center gap-3 mt-3 group">
-                                    <span className="text-green-500 font-bold opacity-80 group-focus-within:opacity-100 transition-opacity">➜ virtua-box</span>
+                                    <span className="text-green-500 font-bold opacity-80 group-focus-within:opacity-100 transition-opacity">➜ cloud-box</span>
                                     <input
                                         autoFocus
                                         className={`bg-transparent border-none outline-none ${currentTheme === 'dark' ? 'text-white' : 'text-black'} flex-1 p-0 m-0 font-mono text-[11px] caret-blue-500 placeholder:text-gray-800`}
