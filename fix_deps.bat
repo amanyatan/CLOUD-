@@ -1,0 +1,6 @@
+@echo off
+echo Cleaning...
+powershell -Command "Remove-Item node_modules/@monaco-editor -Force -Recurse -ErrorAction SilentlyContinue"
+powershell -Command "Remove-Item node_modules/framer-motion -Force -Recurse -ErrorAction SilentlyContinue"
+echo Installing...
+npm install "@monaco-editor/react" "framer-motion" "three" --legacy-peer-deps
