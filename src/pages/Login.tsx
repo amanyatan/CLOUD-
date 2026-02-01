@@ -6,6 +6,7 @@ import ThemeToggle from '../components/ThemeToggle'
 import VantaClouds from '../components/VantaClouds'
 import { motion } from 'framer-motion'
 import NotificationToast from '../components/NotificationToast'
+import { getRedirectUrl } from '../lib/auth-utils'
 
 export default function Login() {
     const navigate = useNavigate()
@@ -104,16 +105,24 @@ export default function Login() {
         setLoading(true)
         setNotification(null)
         try {
+            console.log('Initiating Google login with redirect:', getRedirectUrl())
             const { error } = await supabase.auth.signInWithOAuth({
                 provider: 'google',
                 options: {
-                    redirectTo: window.location.origin + '/dashboard'
+                    redirectTo: getRedirectUrl(),
+                    queryParams: {
+                        access_type: 'offline',
+                        prompt: 'consent',
+                    },
                 }
             })
             if (error) throw error
         } catch (error: any) {
-            console.error('Google login error:', error)
-            setNotification({ type: 'error', message: error.message })
+            console.error('Google login error details:', error)
+            setNotification({
+                type: 'error',
+                message: `Google Login failed: ${error.message || 'Check if Google is enabled in Supabase'}`
+            })
             setLoading(false)
         }
     }

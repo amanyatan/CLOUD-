@@ -32,6 +32,27 @@ export default function Dashboard() {
 
             if (profile) {
                 setUserName(profile.full_name || profile.username || 'User')
+            } else {
+                // If profile doesn't exist (e.g. trigger failed), create it now
+                console.log('Profile missing, creating fallback record...')
+                const displayName = user.user_metadata?.full_name || user.email?.split('@')[0] || 'User'
+                const { data: newProfile, error: profileError } = await supabase
+                    .from('profiles')
+                    .upsert({
+                        id: user.id,
+                        email: user.email,
+                        username: displayName,
+                        full_name: displayName,
+                        avatar_url: user.user_metadata?.avatar_url
+                    })
+                    .select()
+                    .single()
+
+                if (!profileError && newProfile) {
+                    setUserName(newProfile.full_name || newProfile.username || 'User')
+                } else {
+                    setUserName(displayName)
+                }
             }
 
             // Fetch files
