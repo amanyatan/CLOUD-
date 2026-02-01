@@ -35,9 +35,9 @@ export default function AIChatbot() {
                 >
                     <div className="absolute top-2 right-2 opacity-50"><Code2 size={12} /></div>
                     <div className="space-y-1">
-                        <div className="flex gap-2"><span className="text-purple-400">const</span> <span className="text-blue-400">result</span> = <span className="text-purple-400">useMemo</span>(() ={">"} {'{'}</div>
+                        <div className="flex gap-2"><span className="text-blue-400">const</span> <span className="text-white">result</span> = <span className="text-blue-400">useMemo</span>(() ={">"} {'{'}</div>
                         <div className="pl-4 text-gray-400 border-l border-white/5">
-                            <span className="text-purple-400">return</span> data.filter(item ={">"} item.active);
+                            <span className="text-blue-400">return</span> data.filter(item ={">"} item.active);
                         </div>
                         <div className="flex gap-2">{'}'}, [data]);</div>
                     </div>

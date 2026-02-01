@@ -9,7 +9,7 @@ export default function Features() {
                 <ArrowLeft size={20} /> Back to Home
             </button>
             <div className="max-w-4xl">
-                <h1 className="text-3xl md:text-5xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
+                <h1 className="text-3xl md:text-5xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-white">
                     Advanced Features
                 </h1>
                 <p className="text-xl text-gray-400 leading-relaxed mb-12">

@@ -1,7 +1,7 @@
 /// <reference lib="deno.ns" />
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts"
 
-const GEMINI_API_KEY = 'AIzaSyC3o8yR3GzoRO2z0I6glFBcsUGdAOtrJUw'
+const GEMINI_API_KEY = Deno.env.get('GEMINI_API_KEY')
 
 const corsHeaders = {
     'Access-Control-Allow-Origin': '*',

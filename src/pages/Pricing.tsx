@@ -10,7 +10,7 @@ export default function Pricing() {
                 <ArrowLeft size={20} /> Back to Home
             </button>
             <div className="max-w-6xl mx-auto text-center">
-                <h1 className="text-3xl md:text-5xl font-bold mb-16 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500">
+                <h1 className="text-3xl md:text-5xl font-bold mb-16 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500">
                     Simple, Transparent Pricing
                 </h1>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

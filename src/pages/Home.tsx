@@ -45,7 +45,7 @@ export default function Home() {
                     className="flex items-center gap-3 cursor-pointer group"
                     onClick={() => navigate('/')}
                 >
-                    <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-600 flex items-center justify-center shadow-2xl shadow-blue-500/40 relative overflow-hidden">
+                    <div className="w-12 h-12 rounded-2xl bg-black border border-white/10 flex items-center justify-center shadow-2xl shadow-blue-500/20 relative overflow-hidden">
                         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-from)_0%,_transparent_100%)] opacity-50 animate-pulse" />
                         <InfinityIcon className="text-white w-8 h-8 relative z-10 group-hover:rotate-180 transition-transform duration-700 ease-in-out" />
                     </div>
@@ -92,9 +92,9 @@ export default function Home() {
                         transition={{ duration: 0.8, delay: 0.2 }}
                         className="text-6xl md:text-8xl font-bold mb-8 leading-[1] tracking-tighter text-slate-900 dark:text-white"
                     >
-                        Build without <br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 dark:from-blue-400 dark:via-purple-500 dark:to-indigo-500 animate-gradient-x px-2">
-                            Boundaries.
+                        New Era of <br />
+                        <span className="text-5xl md:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-400 to-gray-600 dark:from-white dark:via-gray-400 dark:to-gray-600 animate-gradient-x px-2">
+                            CODING
                         </span>
                     </motion.h1>
 
@@ -165,7 +165,7 @@ export default function Home() {
                                     <div className="text-[10px] text-slate-500 dark:text-gray-500 uppercase tracking-widest font-bold">Logic Accuracy</div>
                                 </div>
                                 <div className="p-5 rounded-2xl bg-white/40 dark:bg-white/5 border border-slate-200 dark:border-white/10 shadow-sm backdrop-blur-md">
-                                    <div className="text-purple-600 dark:text-purple-400 font-bold text-xl mb-1">&lt; 100ms</div>
+                                    <div className="text-white dark:text-white font-bold text-xl mb-1">&lt; 100ms</div>
                                     <div className="text-[10px] text-slate-500 dark:text-gray-500 uppercase tracking-widest font-bold">Response Latency</div>
                                 </div>
                             </div>
@@ -183,8 +183,8 @@ export default function Home() {
                             transition={{ duration: 0.8 }}
                             className="order-2 lg:order-1"
                         >
-                            <div className="w-14 h-14 rounded-2xl bg-purple-500/10 flex items-center justify-center mb-6 border border-purple-500/20">
-                                <Users className="text-purple-400 w-7 h-7" />
+                            <div className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center mb-6 border border-white/10">
+                                <Users className="text-white w-7 h-7" />
                             </div>
                             <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight text-slate-900 dark:text-white">Sync-Speed <br />Teamwork.</h2>
                             <p className="text-slate-600 dark:text-gray-400 text-lg mb-10 leading-relaxed font-medium">
@@ -197,7 +197,7 @@ export default function Home() {
                                     'Instant feedback loops with inline comments'
                                 ].map((item, i) => (
                                     <div key={i} className="flex items-center gap-3 text-gray-900 dark:text-gray-300">
-                                        <div className="w-1.5 h-1.5 rounded-full bg-purple-500" />
+                                        <div className="w-1.5 h-1.5 rounded-full bg-blue-500" />
                                         <span className="text-sm font-medium">{item}</span>
                                     </div>
                                 ))}
@@ -240,40 +240,7 @@ export default function Home() {
                     </div>
                 </section>
 
-                {/* Block 4: Pricing Section Integrated */}
-                <section className="py-32 relative">
-                    <div className="container mx-auto px-6 text-center">
-                        <h2 className="text-5xl font-bold mb-6 text-black dark:text-white">Choose your speed.</h2>
-                        <p className="text-black dark:text-gray-400 mb-16 max-w-xl mx-auto font-bold opacity-80">Start for free and scale as you grow. No hidden fees, just transparent pricing for everyone.</p>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                            {[
-                                { name: 'Starter', price: '$0', features: ['3 Projects', 'Standard AI', 'Public Repos'] },
-                                { name: 'Pro', price: '$19', features: ['Unlimited Projects', 'Advanced AI', 'Private Repos'], popular: true },
-                                { name: 'Enterprise', price: 'Custom', features: ['24/7 Support', 'Custom AI Training', 'SLA Guarantees'] }
-                            ].map((plan, i) => (
-                                <div key={i} className={`p-8 rounded-[2rem] border transition-all ${plan.popular ? 'bg-white/90 dark:bg-blue-600/10 border-blue-500/50 scale-105 relative z-10 shadow-2xl' : 'bg-white/60 dark:bg-white/5 border-slate-200 dark:border-white/10 shadow-sm'}`}>
-                                    {plan.popular && <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-blue-600 text-[10px] font-black uppercase tracking-widest px-6 py-1.5 rounded-full shadow-lg text-white">Popular Choice</span>}
-                                    <h3 className="text-xl font-bold mb-2 text-slate-900 dark:text-white">{plan.name}</h3>
-                                    <div className="text-4xl font-bold mb-10 text-slate-900 dark:text-white tracking-tight">{plan.price}{plan.price !== 'Custom' && <span className="text-sm font-medium text-slate-500">/mo</span>}</div>
-                                    <ul className="text-left space-y-4 mb-10 text-sm text-slate-600 dark:text-gray-400">
-                                        {plan.features.map((f, j) => (
-                                            <li key={j} className="flex items-center gap-3 font-medium">
-                                                <div className="w-1.5 h-1.5 rounded-full bg-blue-500" />
-                                                {f}
-                                            </li>
-                                        ))}
-                                    </ul>
-                                    <button
-                                        onClick={() => navigate('/login')}
-                                        className={`w-full py-4 rounded-xl font-bold text-sm transition-all ${plan.popular ? 'bg-blue-600 hover:bg-blue-500 text-white shadow-lg' : 'bg-slate-900 dark:bg-white/10 text-white dark:text-white hover:bg-slate-800'}`}
-                                    >
-                                        Get Started
-                                    </button>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </section>
+
 
                 {/* Final CTA */}
                 <section className="py-40 relative overflow-hidden">
@@ -287,7 +254,7 @@ export default function Home() {
                             className="max-w-4xl mx-auto p-12 md:p-24 rounded-[3.5rem] bg-slate-900 dark:bg-white/[0.03] border border-white/10 backdrop-blur-3xl shadow-[0_32px_64px_-16px_rgba(0,0,0,0.3)] relative overflow-hidden group"
                         >
                             {/* Animated Background Swipe */}
-                            <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/20 via-transparent to-purple-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
+                            <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/10 via-transparent to-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
 
                             <Rocket className="text-blue-400 w-16 h-16 mx-auto mb-10 group-hover:rotate-12 transition-transform duration-500" />
 

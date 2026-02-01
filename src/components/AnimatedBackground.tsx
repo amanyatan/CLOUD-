@@ -23,14 +23,14 @@ export default function AnimatedBackground({ className = "", absolute = false }:
                             gyroControls: false,
                             minHeight: 200.00,
                             minWidth: 200.00,
-                            backgroundColor: theme === 'dark' ? 0x020617 : 0xddeef7,
-                            skyColor: theme === 'dark' ? 0x010b1a : 0x56a4c2,
-                            cloudColor: theme === 'dark' ? 0x1e293b : 0x86a6b8,
-                            cloudShadowColor: theme === 'dark' ? 0x000000 : 0x0e1d29,
-                            sunColor: theme === 'dark' ? 0x2563eb : 0xff9919,
-                            sunGlareColor: theme === 'dark' ? 0x1e3a8a : 0xff6633,
-                            sunlightColor: theme === 'dark' ? 0x3b82f6 : 0xff9933,
-                            speed: 1.0
+                            backgroundColor: theme === 'dark' ? 0x010204 : 0xddeef7,
+                            skyColor: theme === 'dark' ? 0x050810 : 0xbadceb,
+                            cloudColor: theme === 'dark' ? 0x1e2025 : 0xffffff,
+                            cloudShadowColor: theme === 'dark' ? 0x000000 : 0xb8c9d4,
+                            sunColor: 0x3b82f6,
+                            sunGlareColor: 0x2563eb,
+                            sunlightColor: 0x3b82f6,
+                            speed: 0.8
                         })
                         setVantaEffect(effect)
                     } catch (err) {
@@ -46,13 +46,13 @@ export default function AnimatedBackground({ className = "", absolute = false }:
         // Update colors when theme changes if effect already exists
         if (vantaEffect) {
             vantaEffect.setOptions({
-                backgroundColor: theme === 'dark' ? 0x020617 : 0xddeef7,
-                skyColor: theme === 'dark' ? 0x010b1a : 0x56a4c2,
-                cloudColor: theme === 'dark' ? 0x1e293b : 0x86a6b8,
-                cloudShadowColor: theme === 'dark' ? 0x000000 : 0x0e1d29,
-                sunColor: theme === 'dark' ? 0x2563eb : 0xff9919,
-                sunGlareColor: theme === 'dark' ? 0x1e3a8a : 0xff6633,
-                sunlightColor: theme === 'dark' ? 0x3b82f6 : 0xff9933,
+                backgroundColor: theme === 'dark' ? 0x010204 : 0xddeef7,
+                skyColor: theme === 'dark' ? 0x050810 : 0xbadceb,
+                cloudColor: theme === 'dark' ? 0x1e2025 : 0xffffff,
+                cloudShadowColor: theme === 'dark' ? 0x000000 : 0xb8c9d4,
+                sunColor: 0x3b82f6,
+                sunGlareColor: 0x2563eb,
+                sunlightColor: 0x3b82f6,
             })
         }
 

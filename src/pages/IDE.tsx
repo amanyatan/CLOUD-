@@ -231,7 +231,7 @@ export default function IDE() {
                 {/* Left Sidebar (Slim) - Desktop */}
                 <aside className={`hidden md:flex w-14 border-r ${currentTheme === 'dark' ? 'border-white/10 bg-black/30' : 'border-black/10 bg-gray-100'} flex flex-col items-center py-6 gap-8 z-50`}>
                     <FileText className={`w-6 h-6 cursor-pointer ${activeSidebar === 'files' ? 'text-blue-500' : 'text-gray-500'}`} onClick={() => setActiveSidebar('files')} />
-                    <Bot className={`w-6 h-6 cursor-pointer ${activeSidebar === 'ai' ? 'text-purple-500' : 'text-gray-500'}`} onClick={() => setActiveSidebar('ai')} />
+                    <Bot className={`w-6 h-6 cursor-pointer ${activeSidebar === 'ai' ? 'text-blue-500' : 'text-gray-500'}`} onClick={() => setActiveSidebar('ai')} />
                 </aside>
 
                 {/* Mobile Responsive Sidebar */}
@@ -260,7 +260,7 @@ export default function IDE() {
                         </button>
                         <button
                             onClick={() => setActiveSidebar('ai')}
-                            className={`flex-1 p-4 flex items-center justify-center gap-2 transition-colors ${activeSidebar === 'ai' ? 'bg-purple-600/10 text-purple-500 border-b-2 border-purple-500' : 'text-gray-500'}`}
+                            className={`flex-1 p-4 flex items-center justify-center gap-2 transition-colors ${activeSidebar === 'ai' ? 'bg-blue-600/10 text-blue-500 border-b-2 border-blue-500' : 'text-gray-500'}`}
                         >
                             <Bot size={18} />
                             <span className="text-xs font-bold uppercase">AI</span>
@@ -319,18 +319,18 @@ export default function IDE() {
                                         </div>
                                     </div>
                                 ))}
-                                {isGenerating && <Loader2 size={16} className="animate-spin text-purple-500 ml-2" />}
+                                {isGenerating && <Loader2 size={16} className="animate-spin text-blue-500 ml-2" />}
                             </div>
                             <div className="p-4 bg-black/20">
                                 <div className="relative">
                                     <input
-                                        className={`w-full ${currentTheme === 'dark' ? 'bg-white/5 text-white' : 'bg-black/5 text-black'} border ${currentTheme === 'dark' ? 'border-white/10' : 'border-black/10'} rounded-xl py-3 px-4 text-xs outline-none focus:border-purple-500 transition-all placeholder:text-gray-600`}
+                                        className={`w-full ${currentTheme === 'dark' ? 'bg-white/5 text-white' : 'bg-black/5 text-black'} border ${currentTheme === 'dark' ? 'border-white/10' : 'border-black/10'} rounded-xl py-3 px-4 text-xs outline-none focus:border-blue-500 transition-all placeholder:text-gray-600`}
                                         placeholder="Ask anything..."
                                         value={chatInput}
                                         onChange={e => setChatInput(e.target.value)}
                                         onKeyDown={e => e.key === 'Enter' && sendAIChat()}
                                     />
-                                    <Send size={16} className="absolute right-4 top-3.5 text-purple-500 cursor-pointer hover:scale-110 transition-transform" onClick={sendAIChat} />
+                                    <Send size={16} className="absolute right-4 top-3.5 text-blue-500 cursor-pointer hover:scale-110 transition-transform" onClick={sendAIChat} />
                                 </div>
                             </div>
                         </div>

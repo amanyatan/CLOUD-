@@ -10,7 +10,7 @@ export default function CollabVisual() {
                 <div className="flex items-center gap-2">
                     <span className="text-[10px] font-mono text-blue-600 dark:text-blue-400 uppercase tracking-widest font-bold">Collab Session • Live</span>
                 </div>
-                <Users className="w-3.5 h-3.5 text-purple-600 dark:text-purple-400 animate-pulse" />
+                <Users className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400 animate-pulse" />
             </div>
 
             <div className="p-6 relative h-full flex items-center justify-center">
@@ -37,7 +37,7 @@ export default function CollabVisual() {
                 >
                     <div className="flex flex-col items-start gap-1">
                         <MousePointer2 className="w-4 h-4 text-blue-500 fill-blue-500" />
-                        <div className="bg-blue-500 text-white text-[8px] px-1.5 py-0.5 rounded-sm font-bold shadow-lg">Alex</div>
+                        <div className="bg-blue-500 text-white text-[8px] px-1.5 py-0.5 rounded-sm font-bold shadow-lg">amit</div>
                     </div>
                 </motion.div>
 
@@ -50,8 +50,8 @@ export default function CollabVisual() {
                     className="absolute z-10"
                 >
                     <div className="flex flex-col items-start gap-1">
-                        <MousePointer2 className="w-4 h-4 text-purple-500 fill-purple-500" />
-                        <div className="bg-purple-500 text-white text-[8px] px-1.5 py-0.5 rounded-sm font-bold shadow-lg">Sarah</div>
+                        <MousePointer2 className="w-4 h-4 text-white fill-white mix-blend-difference" />
+                        <div className="bg-white text-black text-[8px] px-1.5 py-0.5 rounded-sm font-bold shadow-lg">abhinav</div>
                     </div>
                 </motion.div>
 
@@ -61,12 +61,12 @@ export default function CollabVisual() {
                         scale: [0.8, 1.1, 0.8]
                     }}
                     transition={{ duration: 2, repeat: Infinity }}
-                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-purple-600/10 blur-[40px] rounded-full"
+                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-white/5 blur-[40px] rounded-full"
                 />
             </div>
 
             {/* Ambient Glow */}
-            <div className="absolute -top-20 -left-20 w-40 h-40 bg-purple-600/20 blur-[80px] rounded-full group-hover:bg-purple-600/30 transition-colors" />
+            <div className="absolute -top-20 -left-20 w-40 h-40 bg-white/5 blur-[80px] rounded-full group-hover:bg-white/10 transition-colors" />
         </div>
     )
 }

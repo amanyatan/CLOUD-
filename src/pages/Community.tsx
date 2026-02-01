@@ -247,7 +247,7 @@ export default function Community() {
                                 >
                                     {/* Header with icon and badges */}
                                     <div className="flex items-start gap-4 mb-4">
-                                        <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center flex-shrink-0">
+                                        <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-600 to-black flex items-center justify-center flex-shrink-0">
                                             <Users size={28} />
                                         </div>
 
@@ -266,7 +266,7 @@ export default function Community() {
                                                 </span>
                                             )}
                                             {isCreator && (
-                                                <span className="text-xs px-2.5 py-1 rounded-full bg-purple-500/20 text-purple-400 font-bold">
+                                                <span className="text-xs px-2.5 py-1 rounded-full bg-white/10 text-white font-bold">
                                                     OWNER
                                                 </span>
                                             )}
@@ -300,12 +300,12 @@ export default function Community() {
                                                     }}
                                                     disabled={isFull || !!community.user_status}
                                                     className={`px-4 py-2 rounded-lg text-xs font-bold transition-colors ${community.user_status === 'approved'
-                                                            ? 'bg-green-600 text-white'
-                                                            : community.user_status === 'pending'
-                                                                ? 'bg-yellow-600/20 text-yellow-400 border border-yellow-500/30'
-                                                                : isFull
-                                                                    ? 'bg-gray-600 cursor-not-allowed opacity-50'
-                                                                    : 'bg-blue-600 hover:bg-blue-500'
+                                                        ? 'bg-green-600 text-white'
+                                                        : community.user_status === 'pending'
+                                                            ? 'bg-yellow-600/20 text-yellow-400 border border-yellow-500/30'
+                                                            : isFull
+                                                                ? 'bg-gray-600 cursor-not-allowed opacity-50'
+                                                                : 'bg-blue-600 hover:bg-blue-500'
                                                         }`}
                                                 >
                                                     {community.user_status === 'approved'

@@ -11,7 +11,7 @@ export default function SnippetVisual() {
                 </div>
                 <div className="flex gap-1">
                     <div className="w-1.5 h-1.5 rounded-full bg-blue-500/50" />
-                    <div className="w-1.5 h-1.5 rounded-full bg-purple-500/50" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-gray-500/50" />
                 </div>
             </div>
 
@@ -30,10 +30,10 @@ export default function SnippetVisual() {
                     initial={{ scale: 0.95, opacity: 0 }}
                     animate={{ scale: 1, opacity: 1 }}
                     transition={{ delay: 0.5 }}
-                    className="p-3 rounded-xl bg-indigo-500/10 border border-indigo-500/20 font-mono text-[9px] text-indigo-300"
+                    className="p-3 rounded-xl bg-gray-500/10 border border-gray-500/20 font-mono text-[9px] text-gray-300"
                 >
                     <div className="text-gray-500 mb-1">// Trending Snippet</div>
-                    <div><span className="text-purple-400">export const</span> <span className="text-blue-400">deploy</span> = () ={">"} ...</div>
+                    <div><span className="text-blue-400">export const</span> <span className="text-white">deploy</span> = () ={">"} ...</div>
                 </motion.div>
 
                 <div className="flex items-center gap-2">
@@ -49,7 +49,7 @@ export default function SnippetVisual() {
             </div>
 
             {/* Ambient Glow */}
-            <div className="absolute top-0 right-0 w-24 h-24 bg-indigo-600/10 blur-[40px] rounded-full" />
+            <div className="absolute top-0 right-0 w-24 h-24 bg-gray-600/10 blur-[40px] rounded-full" />
         </div>
     )
 }

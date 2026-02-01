@@ -204,60 +204,60 @@ export default function Profile() {
 
             <div className="relative z-10">
                 {/* Header */}
-                <header className="h-16 border-b border-white/10 bg-black/40 backdrop-blur-xl flex items-center justify-between px-6">
-                    <div className="flex items-center gap-4">
+                <header className="h-16 border-b border-white/10 bg-black/40 backdrop-blur-xl flex items-center justify-between px-3 sm:px-6">
+                    <div className="flex items-center gap-2 sm:gap-4">
                         <button
                             onClick={() => navigate('/dashboard')}
                             className="p-2 hover:bg-white/10 rounded-lg transition-colors"
                         >
                             <ArrowLeft size={20} />
                         </button>
-                        <h1 className="text-xl font-bold">Profile</h1>
+                        <h1 className="text-lg sm:text-xl font-bold">Profile</h1>
                     </div>
-                    <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-2 sm:gap-3">
                         <ThemeToggle />
                         <button
                             onClick={handleLogout}
-                            className="px-4 py-2 bg-red-600 hover:bg-red-500 rounded-lg text-sm font-bold flex items-center gap-2 transition-colors"
+                            className="px-3 sm:px-4 py-2 bg-red-600 hover:bg-red-500 rounded-lg text-sm font-bold flex items-center gap-2 transition-colors"
                         >
                             <LogOut size={16} />
-                            Sign Out
+                            <span className="hidden sm:inline">Sign Out</span>
                         </button>
                     </div>
                 </header>
 
                 {/* Main Content */}
-                <main className="max-w-4xl mx-auto p-6 space-y-6">
+                <main className="max-w-4xl mx-auto p-3 sm:p-6 space-y-4 sm:space-y-6">
                     {/* Profile Card */}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="bg-white/5 border border-white/10 rounded-2xl p-6"
+                        className="bg-white/5 border border-white/10 rounded-2xl p-4 sm:p-6"
                     >
-                        <div className="flex items-start justify-between mb-6">
-                            <div className="flex items-center gap-4">
+                        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
+                            <div className="flex items-center gap-3 sm:gap-4 w-full sm:w-auto">
                                 <div className="relative group/avatar">
-                                    <div className="w-20 h-20 rounded-full border-2 border-blue-500/50 overflow-hidden bg-black/40">
+                                    <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full border-2 border-blue-500/50 overflow-hidden bg-black/40">
                                         <img src={avatarSvg} alt="Avatar" className="w-full h-full object-cover" />
                                     </div>
                                     {isEditing && (
                                         <button
                                             onClick={shuffleAvatar}
-                                            className="absolute -bottom-1 -right-1 p-2 bg-blue-600 hover:bg-blue-500 rounded-full shadow-lg transition-all hover:scale-110"
+                                            className="absolute -bottom-1 -right-1 p-1.5 sm:p-2 bg-blue-600 hover:bg-blue-500 rounded-full shadow-lg transition-all hover:scale-110"
                                             title="Shuffle Avatar"
                                         >
                                             <RefreshCw size={12} className="text-white" />
                                         </button>
                                     )}
                                 </div>
-                                <div>
-                                    <h2 className="text-2xl font-bold">{profile?.full_name || (profile as any)?.username || 'User'}</h2>
-                                    <p className="text-gray-400">{profile?.email}</p>
+                                <div className="flex-1 min-w-0">
+                                    <h2 className="text-xl sm:text-2xl font-bold truncate">{profile?.full_name || (profile as any)?.username || 'User'}</h2>
+                                    <p className="text-gray-400 text-sm sm:text-base truncate">{profile?.email}</p>
                                 </div>
                             </div>
                             <button
                                 onClick={() => setIsEditing(!isEditing)}
-                                className="px-4 py-2 bg-blue-600 hover:bg-blue-500 rounded-lg text-sm font-bold transition-colors"
+                                className="w-full sm:w-auto px-4 py-2 bg-blue-600 hover:bg-blue-500 rounded-lg text-sm font-bold transition-colors whitespace-nowrap"
                             >
                                 {isEditing ? 'Cancel' : 'Edit Profile'}
                             </button>
@@ -323,11 +323,11 @@ export default function Profile() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.1 }}
-                        className="bg-white/5 border border-white/10 rounded-2xl p-6"
+                        className="bg-white/5 border border-white/10 rounded-2xl p-4 sm:p-6"
                     >
                         <div className="flex items-center gap-2 mb-4">
                             <Bell size={20} className="text-blue-500" />
-                            <h3 className="text-lg font-bold">Join Requests</h3>
+                            <h3 className="text-base sm:text-lg font-bold">Join Requests</h3>
                             {joinRequests.length > 0 && (
                                 <span className="px-2 py-0.5 rounded-full bg-red-500 text-xs font-bold">
                                     {joinRequests.length}
@@ -336,19 +336,19 @@ export default function Profile() {
                         </div>
 
                         {joinRequests.length === 0 ? (
-                            <div className="text-center py-8 border border-dashed border-white/10 rounded-xl">
+                            <div className="text-center py-6 sm:py-8 border border-dashed border-white/10 rounded-xl">
                                 <p className="text-gray-400 text-sm mb-2">No pending requests</p>
-                                <p className="text-xs text-gray-500 italic">Requests for communities you own will appear here</p>
+                                <p className="text-xs text-gray-500 italic px-2">Requests for communities you own will appear here</p>
                             </div>
                         ) : (
                             <div className="space-y-3">
                                 {joinRequests.map((request) => (
                                     <div
                                         key={request.id}
-                                        className="flex items-center justify-between p-4 bg-white/5 rounded-xl border border-white/5 hover:border-blue-500/30 transition-all"
+                                        className="flex flex-col sm:flex-row items-start sm:items-center justify-between p-3 sm:p-4 gap-3 bg-white/5 rounded-xl border border-white/5 hover:border-blue-500/30 transition-all"
                                     >
-                                        <div className="flex flex-col gap-1">
-                                            <p className="font-bold text-blue-400">
+                                        <div className="flex flex-col gap-1 flex-1 min-w-0 w-full">
+                                            <p className="font-bold text-blue-400 text-sm sm:text-base truncate">
                                                 {request.profiles?.full_name || 'Anonymous User'}
                                             </p>
                                             <p className="text-xs text-gray-400">
@@ -358,17 +358,17 @@ export default function Profile() {
                                                 {new Date(request.created_at).toLocaleDateString()} at {new Date(request.created_at).toLocaleTimeString()}
                                             </p>
                                         </div>
-                                        <div className="flex gap-2">
+                                        <div className="flex gap-2 w-full sm:w-auto">
                                             <button
                                                 onClick={() => handleApproveRequest(request.id, true)}
-                                                className="p-2.5 bg-green-600/20 hover:bg-green-600 text-green-400 hover:text-white rounded-lg transition-all"
+                                                className="flex-1 sm:flex-none p-2.5 bg-green-600/20 hover:bg-green-600 text-green-400 hover:text-white rounded-lg transition-all"
                                                 title="Approve"
                                             >
                                                 <Check size={18} />
                                             </button>
                                             <button
                                                 onClick={() => handleApproveRequest(request.id, false)}
-                                                className="p-2.5 bg-red-600/20 hover:bg-red-600 text-red-400 hover:text-white rounded-lg transition-all"
+                                                className="flex-1 sm:flex-none p-2.5 bg-red-600/20 hover:bg-red-600 text-red-400 hover:text-white rounded-lg transition-all"
                                                 title="Reject"
                                             >
                                                 <X size={18} />

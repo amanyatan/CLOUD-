@@ -155,7 +155,7 @@ export default function Dashboard() {
                                     </div>
 
                                     {/* Glow Effect */}
-                                    <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl opacity-0 group-hover:opacity-10 blur duration-500 -z-10" />
+                                    <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500 to-gray-600 rounded-2xl opacity-0 group-hover:opacity-10 blur duration-500 -z-10" />
                                 </motion.div>
                             ))}
 

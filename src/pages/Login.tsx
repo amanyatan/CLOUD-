@@ -134,7 +134,7 @@ export default function Login() {
             const { error } = await supabase.auth.signInWithOAuth({
                 provider: 'github',
                 options: {
-                    redirectTo: window.location.origin + '/dashboard'
+                    redirectTo: getRedirectUrl()
                 }
             })
             if (error) throw error
